@@ -1,0 +1,711 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram id="page-0" name="0A. Bestående åtkomst och aktiva kampanjer">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="880" pageHeight="1220" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="lane0" value="Admin / utdelare" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#e2f0d9;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="280" height="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="Server / API" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#dae8fc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="280" height="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Användare" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#fff2cc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="580" y="80" width="280" height="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="0A. Bestående åtkomst och aktiva kampanjer" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="840" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="invite" value="Admin eller utdelare bjuder in en gång&#10;Ange mejladress och lokalavdelning" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="145" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="account" value="Skapa personlig engångsinbjudan&#10;Spara inbjudare och lokalavdelning" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="265" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="login" value="Acceptera och verifiera mejladress&#10;Etablera bestående användaridentitet" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#fff2cc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="610.0" y="395" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="Giltig inbjudan /&#10;aktiv användaråtkomst?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="350.0" y="535" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="deny" value="Neka åtkomst&#10;Visa hur admin kontaktas" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#fff2cc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="610.0" y="690" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="allow" value="Åtkomst utan slutdatum&#10;Visa aktiva kampanjer&#10;Välj kampanj utan ny inbjudan" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="690" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="adminarea" value="Admin: skapa / aktivera kampanj&#10;Skapa områden och prioriteringar" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="835" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="publish" value="Visa ny aktiv kampanj automatiskt&#10;för befintliga utdelare" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="975" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" value="" edge="1" parent="1" source="invite" target="account" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" value="" edge="1" parent="1" source="account" target="login" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" value="" edge="1" parent="1" source="login" target="auth" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" value="Nej" edge="1" parent="1" source="auth" target="deny" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" value="Ja" edge="1" parent="1" source="auth" target="allow" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" value="" edge="1" parent="1" source="allow" target="adminarea" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" value="" edge="1" parent="1" source="adminarea" target="publish" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="naccess" value="Åtkomst ges en gång till lokalavdelningen och består tills admin återkallar den. Alla utdelare kan bjuda vidare.&#10;Kampanjer kan avslutas och paxningar löpa ut utan att användaråtkomsten upphör. Oanvänd engångsinbjudan kan ha giltighetstid." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1110" width="840" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-1" name="0B. Planera, paxa och återkom flera kvällar">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="880" pageHeight="1410" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="lane0" value="Utdelare på dator / mobil" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#e2f0d9;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="280" height="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="Server / API" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#dae8fc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="280" height="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Mobilapp" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#fff2cc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="580" y="80" width="280" height="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="0B. Planera, paxa och återkom flera kvällar" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="840" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="open" value="Visa aktiva kampanjer och välj en&#10;Öppna karta: utdelat, prioritet, paxat" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="145" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="select" value="Välj ledigt delområde&#10;Ange reservationens slutdatum" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="275" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="available" value="Ledigt och tillåtet&#10;att reservera?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="350.0" y="395" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="conflict" value="Visa konflikt och aktuell status&#10;Välj annat område / datum" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="540" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="reserve" value="Reservera atomiskt för användar-ID&#10;Förhindra samtidiga överlapp" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="540" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" value="" edge="1" parent="1" source="open" target="select" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" value="" edge="1" parent="1" source="select" target="available" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" value="Nej" edge="1" parent="1" source="available" target="conflict" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" value="Välj igen" edge="1" parent="1" source="conflict" target="select" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="35" y="575" />
+              <mxPoint x="35" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge15" value="Ja" edge="1" parent="1" source="available" target="reserve" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sync" value="Öppna mobilen med samma konto&#10;Synka eget område och kartunderlag" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#fff2cc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="610.0" y="680" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="evening" value="Genomför kvällspass&#10;Registrera och synka enligt sida 1–2" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#fff2cc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="610.0" y="815" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="done" value="Hela området&#10;klart?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="945" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" value="" edge="1" parent="1" source="reserve" target="sync" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" value="" edge="1" parent="1" source="sync" target="evening" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge21" value="" edge="1" parent="1" source="evening" target="done" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="continue" value="Behåll paxningen till slutdatum&#10;Nästa kväll: synka och fortsätt" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="1085" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="complete" value="Markera hela området klart&#10;Avsluta reservationen" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="1085" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="edge24" value="Ja" edge="1" parent="1" source="done" target="complete" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge25" value="Nej" edge="1" parent="1" source="done" target="continue" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge26" value="Nästa kväll" edge="1" parent="1" source="continue" target="sync" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="1120" />
+              <mxPoint x="830" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nplan" value="Alternativ: utdelaren kan släppa återstående del; admin kan häva reservationen. Slutdatum frigör återstoden automatiskt.&#10;Prioritet, reservation och utdelningsgrad är separata egenskaper. Att pausa eller avsluta kvällens inspelning frigör inte området.&#10;Ny paxning kräver nätkontakt. Offlineinspelning använder tidigare synkat underlag; utgången paxning hanteras vid återkomst." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1290" width="840" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-2" name="1. Registrera utdelning">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="1120" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="lane0" value="Utdelare" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#e2f0d9;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="280" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="Mobilapp" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#dae8fc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="280" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="1. Registrera utdelning" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="560" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s" value="Start" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;ellipse;fillColor=#ffffff;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="110.0" y="145" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign" value="Välj aktiv kampanj och eget område&#10;Starta utdelningspass" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="220" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="gps" value="Kontrollera platsbehörighet&#10;Visa hjälp om behörighet saknas" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="320" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="record" value="Spela in GPS-spår&#10;Spara löpande lokalt" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="430" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="mark" value="Dela ut flyers&#10;Markera utdelad sträcka/område&#10;Pausa vid förflyttning" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="430" width="220" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="stop" value="Stoppa inspelningen" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="580" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="review" value="Visa spår och utdelningsmarkeringar&#10;Tillåt rättning och antal flyers" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="680" width="220" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="approve" value="Granska, rätta och bekräfta&#10;eller kasta passet" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="820" width="220" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="local" value="Spara bekräftat utdelningspass&#10;Status: väntar på uppladdning" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="920" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" value="" edge="1" parent="1" source="s" target="campaign" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" value="" edge="1" parent="1" source="campaign" target="gps" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" value="" edge="1" parent="1" source="gps" target="record" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" value="" edge="1" parent="1" source="record" target="mark" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" value="" edge="1" parent="1" source="mark" target="stop" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" value="" edge="1" parent="1" source="stop" target="review" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" value="" edge="1" parent="1" source="review" target="approve" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge21" value="" edge="1" parent="1" source="approve" target="local" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" value="Förutsättning: godkänd och inloggad användare. Synka kampanj, kartunderlag, eget paxat område och tidigare utdelning innan offlinebruk.&#10;GPS-spår och faktisk utdelning lagras separat. Platsbehörighet krävs. Kasta passet avslutar utan uppladdning. Fortsätt på sida 2." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1030" width="560" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-3" name="2. Synka och visa gemensam karta">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="880" pageHeight="1270" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="lane0" value="Mobilapp" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#e2f0d9;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="280" height="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="Server / API" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#dae8fc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="280" height="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Webbapp" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#fff2cc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="580" y="80" width="280" height="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="2. Synka och visa gemensam karta" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="840" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="pending" value="Bekräftat lokalt pass&#10;väntar på uppladdning" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="145" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="net" value="Internet&#10;tillgängligt?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="265" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="wait" value="Behåll passet lokalt&#10;Försök igen när nät finns" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="425" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="send" value="Ta emot uppladdning&#10;Unikt pass-ID förhindrar dubblett" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="425" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" value="" edge="1" parent="1" source="pending" target="net" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" value="Nej" edge="1" parent="1" source="net" target="wait" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" value="Försök igen" edge="1" parent="1" source="wait" target="net" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="35" y="460" />
+              <mxPoint x="35" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge13" value="Ja" edge="1" parent="1" source="net" target="send" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="valid" value="Behörighet och&#10;data giltiga?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="350.0" y="555" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="error" value="Visa fel och behåll lokalt&#10;Åtgärda / logga in och försök igen" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="720" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="store" value="Spara pass och utdelningsgeometri&#10;Uppdatera delområdets framsteg" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="720" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" value="" edge="1" parent="1" source="send" target="valid" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" value="Nej" edge="1" parent="1" source="valid" target="error" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge19" value="Ja" edge="1" parent="1" source="valid" target="store" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ack" value="Ta emot kvittens&#10;Status: uppladdat" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="870" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="map" value="Hämta vald aktiv kampanjs utdelningar&#10;Visa egna och andras på karta" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#fff2cc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="610.0" y="870" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge22" value="Kvittens" edge="1" parent="1" source="store" target="ack" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge23" value="Vid öppning / uppdatering" edge="1" parent="1" source="store" target="map" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="820" />
+              <mxPoint x="720" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="filter" value="Filtrera kampanj och datum&#10;Visa prioritet, paxning och framsteg" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#fff2cc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="610.0" y="1010" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="edge25" value="" edge="1" parent="1" source="map" target="filter" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge26" value="Nytt försök" edge="1" parent="1" source="error" target="pending" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="760" />
+              <mxPoint x="40" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note2" value="Samma konto och gemensamma data används i mobil och webb. Servern kontrollerar kampanjbehörighet på varje begäran.&#10;Uppladdning får inte förlora pass eller skapa dubbletter. Ett kvällspass avslutar inte paxningen. Avstängd åtkomst stoppar nya hämtningar." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1170" width="840" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-4" name="3. Analysera utdelning mot valresultat">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="880" pageHeight="1190" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="lane0" value="Admin" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#e2f0d9;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="280" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="Server / analys" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#dae8fc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="280" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Webbapp" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;swimlane;horizontal=1;startSize=40;fillColor=#fff2cc;swimlaneFillColor=#fafafa;strokeColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="580" y="80" width="280" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="3. Analysera utdelning mot valresultat" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="840" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="import" value="Admin: importera valresultat och&#10;valdistriktsgränser med år/version" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="145" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="check" value="Kontrollera distrikt-ID, valtyp,&#10;år och geografisk version" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="265" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ready" value="Underlag&#10;giltigt?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="350.0" y="395" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fix" value="Visa felrapport&#10;Rätta importunderlaget" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#e2f0d9;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="405" width="220" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" value="" edge="1" parent="1" source="import" target="check" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" value="" edge="1" parent="1" source="check" target="ready" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" value="Nej" edge="1" parent="1" source="ready" target="fix" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" value="Importera igen" edge="1" parent="1" source="fix" target="import" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="35" y="440" />
+              <mxPoint x="35" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="choose" value="Välj kampanj, period och val&#10;Välj jämförelseval vid behov" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#fff2cc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="610.0" y="555" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" value="Ja" edge="1" parent="1" source="ready" target="choose" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aggregate" value="Koppla utdelningsgeometri till distrikt&#10;Summera pass, sträckor och flyers" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="705" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" value="" edge="1" parent="1" source="choose" target="aggregate" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="compare" value="Koppla till MP:s röster / röstandel&#10;Beräkna förändring om jämförbart" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#dae8fc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330.0" y="845" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" value="" edge="1" parent="1" source="aggregate" target="compare" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="show" value="Visa karta, distriktstabell och diagram&#10;Exportera analysdata" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;spacing=8;strokeColor=#666666;fillColor=#fff2cc;rounded=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="610.0" y="975" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge21" value="" edge="1" parent="1" source="compare" target="show" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeColor=#555555;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note3" value="Förslag att besluta: hur räknas flyers när ett pass korsar distriktsgränser? Hur hanteras överlappande utdelning?&#10;Ändrade valdistriktsgränser kräver harmonisering eller spärrad jämförelse. Samband visar inte orsak eller kampanjeffekt." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1100" width="840" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-5" name="K1. Krav – Åtkomst och roller">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1370" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="title" value="K1. Krav – Åtkomst och roller" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-01" value="ACC-01 · V1&#10;Systemet ska kräva identifierad åtkomst etablerad genom en accepterad personlig inbjudan till lokalavdelningen, utan separat godkännande eller ny inbjudan per kampanj.&#10;Kontroll: Accepterad giltig inbjudan ger åtkomst direkt; oinbjuden användare nekas kartdata." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-02" value="ACC-02 · V1&#10;Systemet ska koppla konto, utdelningspass och reservationer till ett stabilt internt användar-ID.&#10;Kontroll: Samma konto på två enheter visar samma reservationer." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-03" value="ACC-03 · V1&#10;Systemet ska ha endast två roller: utdelare och admin. Alla utdelare ska ha samma rättigheter och kunna bjuda vidare inom sin lokalavdelning.&#10;Kontroll: En inbjuden utdelare kan själv bjuda in andra; gästroll eller särskilda inbjudningsnivåer saknas." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-04" value="ACC-04 · V1&#10;Admin och utdelare ska kunna bjuda in till sin lokalavdelning en gång, utan ny inbjudan per kampanj. Endast admin ska kunna administrera behörigheter och återkalla åtkomst.&#10;Kontroll: Utdelare kan bjuda in men inte ge adminroll eller häva avstängning; återkallad användare nekas nya serverbegäranden." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-05" value="ACC-05 · V1&#10;Servern ska kontrollera aktiv behörighet vid varje läsning, ändring och export av skyddade data.&#10;Kontroll: Direkta API-anrop utan rätt behörighet nekas." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="610" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-06" value="ACC-06 · V1&#10;Samma bestående användaridentitet ska kunna användas både på datorn i webbappen och i mobilappen.&#10;Kontroll: Reservation på datorn blir tillgänglig efter mobilsynkning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="740" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-07" value="ACC-07 · V1&#10;Personliga inbjudningar ska knytas till mottagarens mejladress, vara tidsbegränsade och kunna accepteras en gång efter verifiering av samma adress. Den tidsbegränsade engångsinbjudan ska inte tidsbegränsa användarens etablerade åtkomst. Medlemskap i MP ska inte krävas.&#10;Kontroll: Rätt mottagare får rollen utdelare direkt; annan adress, använd eller utgången länk nekas." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="870" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-08" value="ACC-08 · V1&#10;Systemet ska spara vem som bjudit in vem, till vilken lokalavdelning och när. Admin ska kunna se uppgifterna.&#10;Kontroll: En accepterad inbjudan kan spåras till inbjudare, mottagare, lokalavdelning och tid." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1000" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqACC-09" value="ACC-09 · V1&#10;Etablerad användaråtkomst ska gälla utan slutdatum tills admin återkallar den. Avslutad kampanj ska inte avsluta användarens åtkomst.&#10;Kontroll: Samma identitet kan öppna en ny kampanj efter att den tidigare avslutats, utan ny inbjudan." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1130" width="1040" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="campaign-reqs-v4" name="Kampanjer – krav">
+    <mxGraphModel grid="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Aktiva kampanjer – krav" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="reqCMP-01" value="CMP-01 · V1&#10;Mobilapp och webbapp ska visa en lista över aktiva kampanjer inom användarens lokalavdelning.&#10;Kontroll: En nyligen aktiverad kampanj visas efter uppdatering; andra lokalavdelningars kampanjer visas inte." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqCMP-02" value="CMP-02 · V1&#10;Admin ska kunna skapa, aktivera och avsluta kampanjer. Befintliga utdelare ska få tillgång till nya aktiva kampanjer automatiskt.&#10;Kontroll: En utdelare som redan har åtkomst kan välja den nya kampanjen utan ny inbjudan eller godkännande." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqCMP-03" value="CMP-03 · V1&#10;Användaren ska kunna välja aktiv kampanj före planering eller inspelning. Utdelning, prioriteringar och reservationer ska hållas åtskilda per kampanj. Avslutade kampanjers historik ska bevaras.&#10;Kontroll: Byte av kampanj visar rätt data. Avslutad kampanj tas bort från aktivlistan utan att konto eller sparad historik raderas." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="scope" value="En inbjudan etablerar bestående åtkomst till den egna lokalavdelningen.&#10;Aktiva kampanjer visas i både mobil och webb. Ingen ny inbjudan eller extra godkännanderunda per kampanj.&#10;Kampanjens livslängd och paxningens slutdatum är skilda från användaråtkomstens giltighet." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="500" width="1040" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-6" name="K2. Krav – Karta och prioritering">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1090" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="title" value="K2. Krav – Karta och prioritering" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="reqMAP-01" value="MAP-01 · V1&#10;Kartan ska visa egna och andras bekräftade utdelningar inom behörig kampanj.&#10;Kontroll: Två användare ser ett uppladdat pass efter uppdatering." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqMAP-02" value="MAP-02 · V1&#10;Kartan ska före start visa vad som redan är utdelat och vilka delområden som är paxade.&#10;Kontroll: Utdelaren kan kontrollera området innan inspelning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqMAP-03" value="MAP-03 · V1&#10;Admin ska kunna skapa eller välja fördefinierade delområden med namn och geografisk gräns.&#10;Kontroll: Ett sparat område visas och kan väljas." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqMAP-04" value="MAP-04 · V1&#10;Admin ska kunna ange och ändra prioritet samt instruktioner för delområden.&#10;Kontroll: Ändringen syns i utdelarens karta efter uppdatering." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqMAP-05" value="MAP-05 · V1&#10;Prioritet, reservation och utdelningsgrad ska lagras och visas som separata egenskaper.&#10;Kontroll: Ett område kan samtidigt vara prioriterat, paxat och delvis utdelat." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="610" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqMAP-06" value="MAP-06 · V1&#10;Kartan ska använda tydliga färger och text eller symboler för ledigt, paxat, delvis utdelat och klart.&#10;Kontroll: Status kan förstås även utan att skilja färger åt." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="740" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqMAP-07" value="MAP-07 · V1&#10;Användaren ska kunna filtrera kartan på kampanj och utdelningsdatum samt inspektera ett pass.&#10;Kontroll: Pass utanför vald kampanj eller period visas inte." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="870" width="1040" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-7" name="K3. Krav – Paxning och flera kvällar">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1220" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="title" value="K3. Krav – Paxning och flera kvällar" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="reqRES-01" value="RES-01 · V1&#10;Utdelaren ska kunna reservera ett ledigt delområde till ett angivet slutdatum från webb eller mobil.&#10;Kontroll: Bokningen visar reserverat område och sluttid." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqRES-02" value="RES-02 · V1&#10;Servern ska atomiskt neka reservationer som överlappar en annan aktiv reservation i samma kampanj.&#10;Kontroll: Två samtidiga försök att paxa samma område ger endast en bokning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqRES-03" value="RES-03 · V1&#10;Kartan ska visa reservationens ansvariga användare eller valt visningsnamn och slutdatum för behöriga användare.&#10;Kontroll: Andra utdelare ser att och till när området är upptaget." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqRES-04" value="RES-04 · V1&#10;Reservationen ska bestå mellan kvällspass tills området är klart, släpps, hävs eller tiden löper ut.&#10;Kontroll: Stoppa inspelning frigör inte området." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqRES-05" value="RES-05 · V1&#10;Utdelaren ska kunna återuppta sitt område och se tidigare framsteg efter synkning.&#10;Kontroll: Nästa kväll visar tidigare bekräftad utdelning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="610" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqRES-06" value="RES-06 · V1&#10;Utdelaren ska kunna markera området klart eller släppa återstående del utan att radera tidigare utdelning.&#10;Kontroll: Klart avslutar paxningen; släpp frigör endast återstoden." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="740" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqRES-07" value="RES-07 · V1&#10;Admin ska kunna häva reservationer och hantera konflikter; utgångna reservationer ska frigöra återstoden.&#10;Kontroll: Utgången eller hävd reservation hindrar inte ny bokning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="870" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqRES-08" value="RES-08 · V1&#10;Ny eller ändrad paxning ska kräva serverbekräftelse och visas som aktiv först efter godkänd bokning.&#10;Kontroll: Offlineförsök kan inte visas som bekräftad paxning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1000" width="1040" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-8" name="K4. Krav – Mobil inspelning">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1090" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="title" value="K4. Krav – Mobil inspelning" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="reqREC-01" value="REC-01 · V1&#10;Utdelaren ska kunna starta, pausa, återuppta och stoppa GPS-inspelning kopplad till kampanj och delområde.&#10;Kontroll: Pausade förflyttningar registreras inte som utdelning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqREC-02" value="REC-02 · V1&#10;Appen ska kontrollera platsbehörighet och hjälpa användaren om den saknas.&#10;Kontroll: Ingen inspelning påstås vara aktiv utan nödvändig behörighet." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqREC-03" value="REC-03 · V1&#10;GPS-spår och bekräftad utdelningsgeometri ska hållas isär; utdelaren ska ange faktiskt utdelad sträcka eller område.&#10;Kontroll: En registrerad förflyttning blir inte automatiskt bekräftad utdelning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqREC-04" value="REC-04 · V1&#10;Utdelaren ska kunna granska, rätta och bekräfta eller kasta ett pass samt ange antal flyers.&#10;Kontroll: Kastat pass laddas inte upp; rättningar följer uppladdningen." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqREC-05" value="REC-05 · V1&#10;Appen ska spara inspelning löpande lokalt och kunna registrera pass utan nät efter förberedande synkning.&#10;Kontroll: Avbrutet nät förlorar inte lokalt sparad inspelning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="610" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqREC-06" value="REC-06 · V1&#10;GPS-inspelning ska fungera med släckt skärm på de mobilplattformar som projektet väljer att stödja.&#10;Kontroll: Praktiskt promenadtest med låst skärm och återöppnad app." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="740" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqREC-07" value="REC-07 · V1&#10;Appen ska kunna synka eget paxat område, tidigare utdelning och nödvändigt kartunderlag inför offlinebruk.&#10;Kontroll: Utdelaren kan se sitt förberedda underlag utan nät." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="870" width="1040" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-9" name="K5. Krav – Synkning och gemensamma data">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1090" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="title" value="K5. Krav – Synkning och gemensamma data" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSYN-01" value="SYN-01 · V1&#10;Mobilapp och webbapp ska använda gemensamma konton och gemensamma kampanjdata.&#10;Kontroll: Ändring på en enhet visas på den andra efter uppdatering." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSYN-02" value="SYN-02 · V1&#10;Bekräftade pass ska köas lokalt vid saknat nät och uppladdningen ska återförsökas när nät finns.&#10;Kontroll: Köat pass kan laddas upp efter återställd anslutning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSYN-03" value="SYN-03 · V1&#10;Varje pass ska ha ett unikt ID; upprepad uppladdning ska inte skapa dubbla pass.&#10;Kontroll: Upprepa samma uppladdning och verifiera ett lagrat pass." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSYN-04" value="SYN-04 · V1&#10;Servern ska validera behörighet och data samt kvittera först efter lagring. Appen ska visa väntande, uppladdat och fel.&#10;Kontroll: Serverfel behåller lokala data och visar begripligt fel." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSYN-05" value="SYN-05 · V1&#10;Uppladdade pass ska uppdatera delområdets framsteg och kunna visas i den gemensamma kartan.&#10;Kontroll: Nytt pass ändrar framstegen utan att avsluta aktiv paxning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="610" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSYN-06" value="SYN-06 · V1&#10;Pass ska behålla utdelningstid, kampanj, användar-ID, geometri och angivet antal flyers separat från uppladdningstid.&#10;Kontroll: Ett offlinepass får rätt utdelningsdatum efter senare uppladdning." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="740" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSYN-07" value="SYN-07 · V1&#10;Pass med utgången paxning eller ändrad behörighet ska hanteras med tydlig konfliktstatus utan tyst dataförlust.&#10;Kontroll: Sent offlinepass följer beslutad konfliktregel och försvinner inte." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="870" width="1040" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-10" name="K6. Krav – Valanalys">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="title" value="K6. Krav – Valanalys" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="reqANA-01" value="ANA-01 · Senare&#10;Admin ska kunna importera valresultat och valdistriktsgränser med år, valtyp och version.&#10;Kontroll: Felaktig import ger rapport; giltigt underlag lagras." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqANA-02" value="ANA-02 · Senare&#10;Systemet ska koppla utdelningsgeometri till valdistrikt och sammanställa pass, sträckor och flyers enligt beslutad metod.&#10;Kontroll: Känd utdelning ger förväntad distriktssummering." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqANA-03" value="ANA-03 · Senare&#10;Webbappen ska visa MP:s röster och röstandel per distrikt tillsammans med utdelningsmått.&#10;Kontroll: Vald kampanj och val visas i karta, tabell och diagram." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqANA-04" value="ANA-04 · Senare&#10;Användaren ska kunna välja period och jämförelseval samt se förändring där geografiska underlag är jämförbara.&#10;Kontroll: Ändrade gränser varnas för och jämförelse spärras eller harmoniseras." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqANA-05" value="ANA-05 · Senare&#10;Analysdata ska kunna exporteras av behörig användare; diagram ska inte presentera samband som bevisad kampanjeffekt.&#10;Kontroll: Export följer filter och åtkomstregler; analysens begränsning framgår." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="610" width="1040" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-11" name="K7. Krav – Säkerhet och drift">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="title" value="K7. Krav – Säkerhet och drift" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSEC-01" value="SEC-01 · V1&#10;Skyddad kartdata och export ska inte vara publikt åtkomliga via filer, länkar eller API.&#10;Kontroll: Oinloggad besökare och delad direktlänk ger inte skyddad data." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSEC-02" value="SEC-02 · V1&#10;Kommunikation mellan klienter och server ska vara krypterad; inloggning ska använda etablerad autentiseringslösning.&#10;Kontroll: Driftsatt lösning använder HTTPS och vald kontotjänst." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSEC-03" value="SEC-03 · V1&#10;Gemensam karta ska visa endast beslutade nödvändiga personuppgifter. Återkallad åtkomst ska rensa appens cache vid nästa kontakt.&#10;Kontroll: Cache rensas när återkallelse upptäcks; begränsning för offlinekopior dokumenteras." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSEC-04" value="SEC-04 · V1&#10;Adminändringar av behörigheter och reservationer ska kunna spåras till användare och tid.&#10;Kontroll: En ändring kan följas i händelsehistoriken." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="1040" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reqSEC-05" value="SEC-05 · V1&#10;Serverdata ska säkerhetskopieras och återställning ska verifieras innan skarp användning.&#10;Kontroll: Ett provunderlag återställs från säkerhetskopia." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#f3f8ef;strokeColor=#b7c9ae;" vertex="1" parent="1">
+          <mxGeometry x="20" y="610" width="1040" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-12" name="Beslut och föreslagen etappindelning">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1240" math="0" shadow="0">
+      <root>
+        <mxCell id="0" value="" />
+        <mxCell id="1" parent="0" value="" />
+        <mxCell id="title" value="Beslut och föreslagen etappindelning" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;text;align=left;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="1040" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dec0" value="Föreslagen V1: privata konton, karta, adminprioriteringar, fördefinierade delområden, enkel paxning, GPS-pass och synkning. Senare: valanalys. Etappindelningen behöver godkännas av projektgruppen." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="85" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec1" value="Teknikval är öppet. R Shiny / Leaflet är kandidat för webb och analys. Samma konton och kampanjdata ska användas på dator och mobil. Testa GPS med låst skärm tidigt." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="185" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec2" value="Vilka mobilplattformar stöds: Android, iOS eller båda? Hur mycket GPS-avvikelse och batteriförbrukning accepteras?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="285" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec3" value="Ska utdelning markeras som sträckor, adresser eller ytor? Hur räknas täckningsgrad och när får hela området markeras klart?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="385" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec4" value="Hur stora ska delområden vara? Vilka prioritetsnivåer och maximal reservationstid behövs?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="485" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec5" value="Hur hanteras sena offlinepass när paxningen löpt ut och en annan person hunnit reservera? Inga pass får tyst försvinna." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="585" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec6" value="Hur fördelas flyers mellan distrikt när ett pass korsar en gräns? Hur räknas överlapp och upprepad utdelning?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="685" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec7" value="Vilka val, år och datakällor används? Hur hanteras ändrade distriktsgränser?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="785" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec8" value="Vilket visningsnamn ser andra utdelare? Hur länge sparas GPS-spår, personkopplingar och säkerhetskopior?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="885" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec9" value="Vilken driftlösning och identitetslösning används: inloggning eller personlig åtkomstlänk? Vilka analys- och exportfunktioner ska utdelare respektive admin få använda?" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="985" width="1040" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="dec10" value="Säkerhetsgräns: godkända personer kan ta skärmbilder. Redan nedladdad offlineinformation kan inte garanteras återkallad." style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=14;rounded=1;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1085" width="1040" height="85" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
