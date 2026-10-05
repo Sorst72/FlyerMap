@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="sv">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FlyerMap · Kampanjkartan</title><link rel="stylesheet" href="/leaflet/leaflet.css"><link rel="stylesheet" href="/style.css"><script defer src="/leaflet/leaflet.js"></script><script defer src="/app.js"></script></head>
+<body>
+<header><a class="brand" href="/">◈ FlyerMap</a><span class="tag">PROTOTYP</span><label class="profile">Demoprofil <select id="profile"><option value="alex">Alex · admin</option><option value="sam">Sam · utdelare</option></select></label></header>
+<main>
+<section class="intro"><div><p class="eyebrow">TILLSAMMANS, OMRÅDE FÖR OMRÅDE</p><h1>Gör nästa utdelning enkel.</h1><p>Välj en kampanj, hitta ett ledigt område och följ det ni har gjort tillsammans.</p></div><button id="refresh" class="secondary">↻ Uppdatera</button></section>
+<div class="demo">Demoläge med exempelområden i Stockholm. Profilerna är inte riktiga konton. Använd bara testuppgifter.</div>
+<div id="notice" role="status" aria-live="polite"></div>
+<section class="toolbar"><label>Kampanj<select id="campaign"></select></label><label>Visa pass från<input type="date" id="date-filter"></label><div id="stats" class="stats"></div></section>
+<div class="workspace"><section class="map-panel"><div id="map" aria-label="Karta över kampanjens delområden"></div><div class="legend"><span><i class="free"></i>Ledigt</span><span><i class="reserved"></i>Paxat</span><span><i class="partial"></i>Delvis utdelat</span><span><i class="done"></i>Klart</span></div><p class="map-note">Bakgrundskartan kräver internet. Du kan även välja områden i listan.</p></section><aside><div class="aside-heading"><h2>Delområden</h2><span id="area-count"></span></div><div id="areas"></div><section id="detail" class="detail"></section></aside></div>
+<section class="bottom"><div><h2>Senaste utdelningspassen</h2><p>Bekräftad utdelning sparas för den valda kampanjen.</p><div id="passes"></div></div><div id="admin"><h2>Hantera kampanj</h2><form id="campaign-form"><label>Ny kampanj<input name="name" required maxlength="80" placeholder="Till exempel Vårkampanjen"></label><button>Skapa kampanj</button></form><button id="close-campaign" class="secondary">Avsluta vald kampanj</button></div></section>
+</main><footer>FlyerMap · Första prototypen från processkartan. Manuell registrering; GPS och offlineinspelning kommer i en senare etapp.</footer>
+</body></html>

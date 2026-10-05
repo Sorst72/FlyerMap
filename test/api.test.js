@@ -1,0 +1,48 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { createApp } from '../server.js';
+
+test('campaign, reservation, distribution and persistence workflow', async t => {
+  const dir = mkdtempSync(join(tmpdir(), 'flyermap-test-'));
+  const dataFile = join(dir, 'state.json');
+  let server = createApp({ dataFile });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  t.after(async () => { await new Promise(resolve => server.close(resolve)); rmSync(dir, { recursive:true, force:true }); });
+  const request = async (path, body, user = 'alex') => {
+    const response = await fetch(`http://127.0.0.1:${server.address().port}${path}`, { method:body ? 'POST' : 'GET', headers:{ 'Content-Type':'application/json', ...(user ? {'X-Demo-User':user} : {}) }, ...(body ? {body:JSON.stringify(body)} : {}) });
+    return { status:response.status, body:await response.json() };
+  };
+  assert.equal((await request('/api/state', undefined, '')).status, 401);
+  assert.equal((await request('/api/campaigns', {name:'Unauthorized'}, 'sam')).status, 403);
+  const campaign = (await request('/api/campaigns', {name:'Test campaign'})).body;
+  const base = {campaignId:campaign.id, areaId:campaign.areas[0].id};
+  const until = new Date(Date.now() + 86400000).toISOString();
+  const bookings = await Promise.all([request('/api/reservations', {...base, until}), request('/api/reservations', {...base, until}, 'sam')]);
+  assert.deepEqual(bookings.map(r => r.status).sort(), [200,409]);
+  const winner = bookings[0].status === 200 ? 'alex' : 'sam';
+  const loser = winner === 'alex' ? 'sam' : 'alex';
+  const pass = {...base, id:'pass-1', flyers:125, notes:'Testgatan 1–20', complete:false, deliveredAt:new Date().toISOString()};
+  assert.equal((await request('/api/passes', pass, loser)).status, 409);
+  assert.equal((await request('/api/passes', {...pass, flyers:-1}, winner)).status, 400);
+  assert.equal((await request('/api/passes', pass, winner)).status, 200);
+  assert.equal((await request('/api/passes', pass, winner)).status, 200);
+  let state = (await request('/api/state')).body;
+  assert.equal(state.passes.length, 1);
+  assert.ok(state.reservations.some(r => r.userId === winner && Date.parse(r.until) > Date.now()));
+  assert.equal((await request('/api/passes', {...pass, id:'pass-2', complete:true}, winner)).status, 200);
+  state = (await request('/api/state')).body;
+  assert.equal(state.passes.length, 2);
+  assert.ok(state.reservations.every(r => Date.parse(r.until) <= Date.now()));
+  assert.equal((await request('/api/reservations', {...base, until}, loser)).status, 409);
+  await new Promise(resolve => server.close(resolve));
+  server = createApp({ dataFile });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  assert.equal((await request('/api/state')).body.passes.length, 2);
+  assert.equal((await request('/api/campaigns/close', {campaignId:campaign.id})).status, 200);
+  state = (await request('/api/state')).body;
+  assert.equal(state.campaigns.find(c => c.id === campaign.id).active, false);
+  assert.equal(state.passes.length, 2);
+});
