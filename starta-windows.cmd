@@ -6,7 +6,7 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-if not exist "node_modules\leaflet\dist\leaflet.js" (
+if not exist "node_modules\@turf\turf\package.json" (
   call npm ci --ignore-scripts
   if errorlevel 1 (
     echo Installationen misslyckades. Kontrollera internetanslutningen.

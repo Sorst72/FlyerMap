@@ -18,7 +18,11 @@ test('campaign, reservation, distribution and persistence workflow', async t => 
   assert.equal((await request('/api/state', undefined, '')).status, 401);
   assert.equal((await request('/api/campaigns', {name:'Unauthorized'}, 'sam')).status, 403);
   const campaign = (await request('/api/campaigns', {name:'Test campaign'})).body;
-  const base = {campaignId:campaign.id, areaId:campaign.areas[0].id};
+  assert.deepEqual(campaign.areas, []);
+  const geometry = {type:'Polygon',coordinates:[[[15.6,58.3],[15.7,58.3],[15.7,58.4],[15.6,58.4],[15.6,58.3]]]};
+  assert.equal((await request('/api/areas',{campaignId:campaign.id,name:'Hjulsbro test',geometry},'sam')).status,403);
+  const area = (await request('/api/areas',{campaignId:campaign.id,name:'Hjulsbro test',geometry})).body;
+  const base = {campaignId:campaign.id, areaId:area.id};
   const until = new Date(Date.now() + 86400000).toISOString();
   const bookings = await Promise.all([request('/api/reservations', {...base, until}), request('/api/reservations', {...base, until}, 'sam')]);
   assert.deepEqual(bookings.map(r => r.status).sort(), [200,409]);
@@ -45,4 +49,21 @@ test('campaign, reservation, distribution and persistence workflow', async t => 
   state = (await request('/api/state')).body;
   assert.equal(state.campaigns.find(c => c.id === campaign.id).active, false);
   assert.equal(state.passes.length, 2);
+  const c2 = (await request('/api/campaigns',{name:'Partial polygons'})).body;
+  const a2 = (await request('/api/areas',{campaignId:c2.id,name:'Campaign area',geometry})).body;
+  const rectangle = (left,right) => ({type:'Polygon',coordinates:[[[left,58.31],[right,58.31],[right,58.39],[left,58.39],[left,58.31]]]});
+  const partialBase = {campaignId:c2.id,areaId:a2.id,until};
+  assert.equal((await request('/api/reservations',{...partialBase,geometry:rectangle(15.59,15.65)},'sam')).status,400);
+  const left = (await request('/api/reservations',{...partialBase,geometry:rectangle(15.61,15.65),name:'West'},'sam')).body;
+  assert.ok(left.id);
+  const right = (await request('/api/reservations',{...partialBase,geometry:rectangle(15.65,15.69),name:'East'})).body;
+  assert.ok(right.id); // Shared boundary is allowed.
+  assert.equal((await request('/api/reservations',{...partialBase,geometry:rectangle(15.64,15.66)})).status,409);
+  assert.equal((await request('/api/reservations',{...partialBase})).status,409);
+  assert.equal((await request('/api/reservations/release',{...partialBase,reservationId:right.id},'sam')).status,403);
+  assert.equal((await request('/api/passes',{...pass,campaignId:c2.id,areaId:a2.id,id:'partial-complete',reservationId:left.id,complete:true},'sam')).status,200);
+  const after = (await request('/api/state')).body;
+  assert.ok(after.reservations.some(r=>r.id===right.id&&Date.parse(r.until)>Date.now()));
+  assert.deepEqual(after.passes.find(p=>p.id==='partial-complete').geometry,left.geometry);
+  assert.equal((await request('/api/reservations',{...partialBase,geometry:left.geometry},'sam')).status,409);
 });

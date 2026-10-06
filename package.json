@@ -3,7 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "scripts": {"start": "node server.js", "test": "node --test"},
-  "engines": {"node": ">=22"},
-  "dependencies": {"leaflet": "1.9.4"}
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.3.4",
+    "leaflet": "1.9.4",
+    "leaflet-draw": "^1.0.4"
+  }
 }
