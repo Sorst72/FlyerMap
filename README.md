@@ -64,3 +64,35 @@ Gränssnittet har även provats i Chromium: paxa → registrera → byta profil 
 - Praktiska GPS-tester på valda mobilplattformar med låst skärm.
 
 Demon ersätter inte processkartans fullständiga V1. Den innehåller inga riktiga användarkonton, ingen GPS-inspelning, ingen offlinegaranti och ingen valanalys.
+
+## GPS-test på Android och iPhone
+
+Det separata GPS-testet ligger i `docs/`. Det är helt statiskt och innehåller inga kampanj-API:er eller demokonton. Positioner sparas bara i telefonens localStorage; inga positionsdata laddas upp. Manuell JSON-export innehåller exakta koordinater och ska hanteras som personuppgifter.
+
+### Aktivera HTTPS med GitHub Pages
+
+Repoägaren behöver göra detta i GitHub:
+
+1. Öppna **Settings → Pages** i Sorst72/FlyerMap.
+2. Under **Build and deployment → Source**, välj **Deploy from a branch**.
+3. Välj grenen **main** och mappen **/docs**, klicka **Save**.
+4. Vänta tills GitHub visar att sidan är publicerad. Öppna adressen GitHub anger; normalt `https://sorst72.github.io/FlyerMap/`.
+5. Öppna samma HTTPS-adress i **Chrome på Android** och **Safari på iPhone**.
+
+Det här publicerar endast GPS-testsidan, inte hela appens Node-server. Ingen egen domän eller kartnyckel behövs. Om Pages saknas eller kräver annan plan, välj en annan statisk HTTPS-host; ladda i så fall upp endast innehållet i `docs/`.
+
+GPS-testet kan även öppnas lokalt på datorn via `http://127.0.0.1:3000/gps/`. En mobil kan inte nå datorns localhost, och vanlig HTTP till en lokal nätverksadress ger inte rätt säkerhetskontext för GPS.
+
+### Promenadtest
+
+1. Anteckna telefonmodell och webbläsare. Starta och tillåt platsåtkomst. Vänta på första positionen innan du börjar.
+2. Gå 2 minuter utomhus med skärmen tänd.
+3. Tryck **Jag låser skärmen nu**, lås telefonen och gå 5 minuter.
+4. Lås upp, återvänd till samma flik, tryck **Jag är tillbaka** och gå ytterligare 2 minuter.
+5. Stoppa. Ta en skärmbild av sammanfattningen. Upprepa gärna utan mobildata efter att sidan har laddats.
+
+Resultatet skiljer mellan positionstjänstens tidpunkt och när webbsidan faktiskt tog emot uppdateringen. En markerad låsperiod är en uppskattning: webbsidan kan inte upptäcka själva skärmlåset. Över 20 sekunders lucka flaggas diagnostiskt, inte som ett fast produktkrav. Ett lyckat test bevisar inte tillförlitlig bakgrundsinspelning. En omladdad/stängd flik återläser sparade data men fortsätter inte inspelningen. Offlineomladdning stöds inte. Testgränsen är 5 000 positioner; inga data kapas tyst.
+
+### Genomförd teknisk kontroll
+
+Chromium med simulerad geolocation verifierade tillstånd före första positionen, nekad behörighet, manuella låsmarkeringar, 120 sekunders lucka, sparning utan nät, JSON-export, återläsning och avbrottsstatus efter omladdning samt mobilbredd. Verklig Android/iPhone, fysisk skärmlåsning och den publicerade HTTPS-adressen återstår att verifiera.
